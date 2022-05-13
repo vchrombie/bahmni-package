@@ -62,6 +62,8 @@ Note: `proxy` is a generic service and it will start always irrespective of belo
 | openelis | OpenELIS            | openelis, openelisdb
 | odoo     | Odoo                | odoo, odoodb |
 | openmrs  | Bahmni EMR          | openmrs, openmrsdb, bahmni-web |
+| bahmni-full  | All applications except Crater  | openmrs, openmrsdb, odoo, odoodb, openelis, openelisdb, bahmni-web |
+| bahmni-lite  | Crater, Bahmni EMR  | openmrs, openmrsdb, crater-php, crater-nginx, craterdb, bahmni-web |
 
 Profiles can be set by changing the `COMPOSE_PROFILES` variable in .env variable. You can set multiple profiles by comma seperated values.
 Example: COMPOSE_PROFILES=openelis,odoo. You can also pass this as an argument with docker-compose up command. Example: `docker-compose --profile odoo up` (or) `docker-compose --profile odoo --profile openelis up`
